@@ -1,11 +1,14 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import CartItem from './CartItem.jsx'
 import Button from './Button';
 import { CartContext } from '../contexts/CartContext.jsx';
 
 const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
-
+  <Link className='nav-link' to='/shop'>
+    SHOP
+  </Link>
   return (
     <div className='cart-dropdown-container'>
       <div className='cart-items'>
@@ -17,7 +20,10 @@ const CartDropdown = () => {
           <span className='empty-message'>Your cart is empty</span>
         )}
       </div>
-      <Button>GO TO CHECKOUT</Button>
+      <Link to='/checkout'>
+        <Button>CHECKOUT</Button>
+      </Link>
+
     </div>
   );
 };

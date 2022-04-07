@@ -1,11 +1,11 @@
 import categories from '../categories.json'
-import CategoryCard from './CategoryCard.jsx'
+import DirectoryCard from './DirectoryCard.jsx'
 
-export default function CategoryList() {
+export default function DirectoryList() {
   return (
-    <div className="categories-container">
+    <div className="directories-container">
       {categories.map(({ title, id, imageUrl }) => (
-        <CategoryCard
+        <DirectoryCard
         key={id}
         imageUrl={imageUrl}
         title={title} />

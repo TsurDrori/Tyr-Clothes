@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import CategoryList from "../components/CategoryList";
+import DirectoryList from "../components/DirectoryList";
 
 
 export default function Home () {
@@ -7,7 +7,7 @@ export default function Home () {
 
   return (
     <div>
-      <CategoryList />
+      <DirectoryList />
       <Outlet />
     </div>
   );
